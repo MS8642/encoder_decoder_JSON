@@ -9,6 +9,9 @@
 
 # The function starts here:
 
+boolean("Would you like to encode files?")
+  answer yes, goes to inp variable
+  answer no, goes to next boolean
 
 inp = input(somefile)
 
@@ -16,5 +19,20 @@ def encoder_starts_here
 .
 .
 .
-print (or otherwise show) a new encoded file.
+print (or otherwise show) a (new?) encoded file.
+
+boolean ("Would you like to decode files?")
+  answer yes, goes to outp variable
+  answer no, goes to finish variable
+
+outp = input(somefile)
+
+def decoder_starts_here
+.
+.
+.
+print( or otherwise show) a (new?) decoded file.
+
+finish = print("Thank you for using this prog".)
+end
 
