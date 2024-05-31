@@ -9,30 +9,22 @@
 
 # The function starts here:
 
-boolean("Would you like to encode files?")
-  answer yes, goes to inp variable
-  answer no, goes to next boolean
+reqst = input("Would you like to encode files? (yes/no):")
 
-inp = input(somefile)
+if reqst.lower() == 'yes':
+    
+    print("This is where the encoding will happen")
 
-def encoder_starts_here
-.
-.
-.
-print (or otherwise show) a (new?) encoded file.
+elif reqst.lower() == 'no':
+    
+    reqst_dec = input("Would you like to decode files? (yes/no):")
 
-boolean ("Would you like to decode files?")
-  answer yes, goes to outp variable
-  answer no, goes to finish variable
+    if reqst.lower() == "yes":
 
-outp = input(somefile)
+        print('This is where the decoding will happen')
 
-def decoder_starts_here
-.
-.
-.
-print( or otherwise show) a (new?) decoded file.
+    elif reqst.lower() == "no":
 
-finish = print("Thank you for using this prog".)
-end
+        print("Thank you for using this program!")
+        exit
 
