@@ -20,6 +20,16 @@ if reqst.lower() == 'encode':
 
 elif reqst.lower() == 'decode':
 
+# Start of the prog.
+# encode or decode?
+# if encode,
+# takes the text,
+# creates it as JSON format (breaks the elements in text for parts)
+# finishes.
+# if decode,
+# takes JSON file
+# gets rid of the JSON file ( specifically, parts)
+# finishes.
     print('This is where the decoding will happen')
 
     print("Thank you for using this program!")
