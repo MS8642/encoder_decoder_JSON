@@ -20,6 +20,11 @@ if reqst.lower() == 'encode':
 
 elif reqst.lower() == 'decode':
 
+    print('This is where the decoding will happen')
+
+    print("Thank you for using this program!")
+    exit
+
 # Start of the prog.
 # encode or decode?
 # if encode,
