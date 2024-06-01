@@ -9,22 +9,21 @@
 
 # The function starts here:
 
-reqst = input("Would you like to encode files? (yes/no):")
+reqst = input("Would you like to encode or decode files? (encode/decode):")
 
-if reqst.lower() == 'yes':
+if reqst.lower() == 'encode':
     
     print("This is where the encoding will happen")
 
-elif reqst.lower() == 'no':
-    
-    reqst_dec = input("Would you like to decode files? (yes/no):")
+    print("Thank you for using the program!")
+    exit
 
-    if reqst.lower() == "yes":
+elif reqst.lower() == 'decode':
 
-        print('This is where the decoding will happen')
+    print('This is where the decoding will happen')
 
-    elif reqst.lower() == "no":
+    print("Thank you for using this program!")
+    exit
 
-        print("Thank you for using this program!")
-        exit
+       
 
