@@ -33,7 +33,9 @@ while i == 0:
         print("Invalid entry, try again")
 
 
-
+# Ideas: the decoding and
+# encoding could require access
+# to the folder with the data.
 
 # Start of the prog.
 # encode or decode?
@@ -45,7 +47,7 @@ while i == 0:
 # takes JSON file
 # gets rid of the JSON file ( specifically, parts)
 # finishes.
-    print('This is where the decoding will happen')
+
 
     print("Thank you for using this program!")
     exit
