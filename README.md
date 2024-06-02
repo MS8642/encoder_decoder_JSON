@@ -47,10 +47,3 @@ while i == 0:
 # takes JSON file
 # gets rid of the JSON file ( specifically, parts)
 # finishes.
-
-
-    print("Thank you for using this program!")
-    exit
-
-       
-
