@@ -9,21 +9,31 @@
 
 # The function starts here:
 
-reqst = input("Would you like to encode or decode files? (encode/decode):")
+i = 0
 
-if reqst.lower() == 'encode':
+while i == 0:
+
+    reqst = input("Would you like to encode or decode files? (encode/decode):")
+
+    if reqst.lower() == 'encode':
     
-    print("This is where the encoding will happen")
+        print("This is where the encoding will happen")
 
-    print("Thank you for using the program!")
-    exit
+        print("Thank you for using the program!")
+        i = 1
 
-elif reqst.lower() == 'decode':
+    elif reqst.lower() == 'decode':
 
-    print('This is where the decoding will happen')
+        print('This is where the decoding will happen')
 
-    print("Thank you for using this program!")
-    exit
+        print("Thank you for using this program!")
+        i = 1
+
+    else:
+        print("Invalid entry, try again")
+
+
+
 
 # Start of the prog.
 # encode or decode?
