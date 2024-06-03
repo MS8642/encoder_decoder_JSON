@@ -1,0 +1,46 @@
+# This is the current 
+# code up to 3rd of June.
+
+i = 0
+import time
+
+while i == 0:
+
+    reqst = input("Would you like to encode or decode files? (encode/decode):")
+
+    if reqst.lower() == 'encode':
+    
+        g= open("Testing.txt","r")
+
+        print("Encoding...")
+
+        time.sleep(5)
+
+        print(g.readline())
+        
+
+        print("Thank you for using the program!")
+        i = 1
+
+    elif reqst.lower() == 'decode':
+
+        g= open("Testing.txt","r")
+
+        print("Decoding...")
+
+        time.sleep(5)
+
+        print(g.readline())
+
+        print("Thank you for using this program!")
+        i = 1
+
+    else:
+        print("Invalid entry, try again")
+
+# What it does:
+# Requests the user what they want to do (encode/decode)
+# if something else is written, the message will request the user to input a valid entry.
+# If the user wants to encode, the prog will access the file where the project is located
+# and will print all the lines there.
+#Similarly for decoding.
