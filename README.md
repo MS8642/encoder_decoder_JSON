@@ -10,6 +10,7 @@
 # The function starts here:
 
 i = 0
+import time
 
 while i == 0:
 
@@ -17,21 +18,33 @@ while i == 0:
 
     if reqst.lower() == 'encode':
     
-        print("This is where the encoding will happen")
+        g= open("Testing.txt","r")
+
+        print("Encoding...")
+
+        time.sleep(5)
+
+        print(g.readline())
+        
 
         print("Thank you for using the program!")
         i = 1
 
     elif reqst.lower() == 'decode':
 
-        print('This is where the decoding will happen')
+        g= open("Testing.txt","r")
+
+        print("Decoding...")
+
+        time.sleep(5)
+
+        print(g.readline())
 
         print("Thank you for using this program!")
         i = 1
 
     else:
         print("Invalid entry, try again")
-
 
 # Ideas: the decoding and
 # encoding could require access
