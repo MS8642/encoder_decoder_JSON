@@ -18,13 +18,30 @@ while i == 0:
 
     if reqst.lower() == 'encode':
     
-        g= open("Testing.txt","r")
+        g= open("Testing.txt", 'r')
 
         print("Encoding...")
 
-        time.sleep(5)
+        time.sleep(2)
+        
+        lst = g.readlines()
+        
+        
+        encd_lst_lngth = len(lst)
 
-        print(g.readline())
+        print("Found " + str(encd_lst_lngth) + " entries")
+
+        time.sleep(2)
+
+        for i in range(encd_lst_lngth):
+            #encd_lst = lst.split()
+            print(encd_lst)
+        
+        #encd_lst = lst.split()
+
+        #print(encd_lst)
+
+        
         
 
         print("Thank you for using the program!")
