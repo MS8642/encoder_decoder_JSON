@@ -1,0 +1,76 @@
+# Please note that currently most of the modifications are made in the 
+# "encode" section.
+
+# A little trouble has been identified.
+# After the text in the text file
+# "Testing.txt" has been formed into
+# a list the printed result 
+# showed this:
+
+  ['Johny 30 null\n', 'Brad 18 Chevrolet']
+
+# The letter n with a dash at the end
+# signifies that string[1]
+# is on the new line which is correct:
+
+  Johny 30 null 
+  Brad 18 Chevrolet
+
+# It can pose to be an obstacle for the main idea however
+# and this code has helped to remove the n:
+
+  lst = [i.split('\n', 1)[0] for i in lst]
+
+# thus giving this output:
+
+  ['Johny 30 null', 'Brad 18 Chevrolet']
+
+# which is correct.
+
+
+i = 0
+import time
+
+while i == 0:
+
+    reqst = input("Would you like to encode or decode files? (encode/decode):")
+
+    if reqst.lower() == 'encode':
+    
+        g= open("Testing.txt", 'r')
+
+        print("Encoding...")
+
+        #time.sleep(2)
+        
+        lst = g.readlines()
+
+        lst = [i.split('\n', 1)[0] for i in lst]
+
+        print(lst)
+        
+        encd_lst_lngth = len(lst)
+
+        print("Found " + str(encd_lst_lngth) + " entries")
+
+        
+
+        print("Thank you for using the program!")
+        i = 1
+
+    elif reqst.lower() == 'decode':
+
+        g= open("Testing.txt","r")
+
+        print("Decoding...")
+
+        time.sleep(5)
+
+        print(g.readline())
+
+        print("Thank you for using this program!")
+        i = 1
+
+    else:
+        print("Invalid entry, try again")
+
