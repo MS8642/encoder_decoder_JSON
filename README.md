@@ -22,26 +22,18 @@ while i == 0:
 
         print("Encoding...")
 
-        time.sleep(2)
+        #time.sleep(2)
         
         lst = g.readlines()
-        
+
+        lst = [i.split('\n', 1)[0] for i in lst]
+
+        print(lst)
         
         encd_lst_lngth = len(lst)
 
         print("Found " + str(encd_lst_lngth) + " entries")
 
-        time.sleep(2)
-
-        for i in range(encd_lst_lngth):
-            #encd_lst = lst.split()
-            print(encd_lst)
-        
-        #encd_lst = lst.split()
-
-        #print(encd_lst)
-
-        
         
 
         print("Thank you for using the program!")
@@ -63,6 +55,7 @@ while i == 0:
     else:
         print("Invalid entry, try again")
 
+        
 # Ideas: the decoding and
 # encoding could require access
 # to the folder with the data.
