@@ -1,0 +1,80 @@
+# Note that this progress is only 
+#for the "encode" part.
+
+# Today the "while" loop
+# is used to print out all entries
+# in the testing environment
+# and to split them into their
+# components for further work.
+
+#General variables
+
+import time
+i = 0
+
+# Variables used for encoding
+jaysn = 0
+p = 0
+
+
+while i == 0:
+
+    reqst = input("Would you like to encode or decode files? (encode/decode):")
+
+    if reqst.lower() == 'encode':
+    
+        g= open("Testing.txt", 'r')
+
+        print("Encoding...")
+
+        #time.sleep(2)
+        
+        lst = g.readlines()
+
+        lst = [i.split('\n', 1)[0] for i in lst]
+
+        print(lst)
+        
+        encd_lst_lngth = len(lst)
+
+        print("Found " + str(encd_lst_lngth) + " entries")
+
+        while jaysn < len(lst):
+            print(lst[p])
+            x = lst[p].split()
+            print(x)
+            p = p + 1
+            jaysn = jaysn + 1
+            
+
+        
+        
+
+        print("Thank you for using the program!")
+        i = 1
+
+    elif reqst.lower() == 'decode':
+
+        g= open("Testing.txt","r")
+
+        print("Decoding...")
+
+        time.sleep(5)
+
+        print(g.readline())
+
+        print("Thank you for using this program!")
+        i = 1
+
+
+    else:
+        print("Invalid entry, try again")
+
+# The following results are produced:
+
+  ['Johny 30 null ', 'Brad 18 Chevrolet']
+  Found 2 entries
+  Johny 30 null
+  ['Johny', '30', 'null']
+  Brad 18 Chevrolet
+  ['Brad', '18', 'Chevrolet']
