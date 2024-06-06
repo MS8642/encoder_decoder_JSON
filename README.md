@@ -77,7 +77,10 @@ while i == 0:
 # encoding could require access
 # to the folder with the data.
 
-# Ideas:
+# Ideas: The entries when split,
+# as lists, will be used 
+# for further work on JSON
+# format. (e.g. ['Brad', '18', 'Chevrolet'] )
 
 # Start of the prog.
 # encode or decode?
