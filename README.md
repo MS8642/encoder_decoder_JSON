@@ -9,8 +9,15 @@
 
 # The function starts here:
 
-i = 0
+# General variables
+
 import time
+i = 0
+
+# Variables used for encoding
+jaysn = 0
+p = 0
+
 
 while i == 0:
 
@@ -34,6 +41,15 @@ while i == 0:
 
         print("Found " + str(encd_lst_lngth) + " entries")
 
+        while jaysn < len(lst):
+            print(lst[p])
+            x = lst[p].split()
+            print(x)
+            p = p + 1
+            jaysn = jaysn + 1
+            
+
+        
         
 
         print("Thank you for using the program!")
@@ -55,10 +71,13 @@ while i == 0:
     else:
         print("Invalid entry, try again")
 
+
         
 # Ideas: the decoding and
 # encoding could require access
 # to the folder with the data.
+
+# Ideas:
 
 # Start of the prog.
 # encode or decode?
