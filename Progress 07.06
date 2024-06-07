@@ -1,0 +1,92 @@
+# Please note that the code described here
+# is for the "encoding" part only.
+
+# The complex objects are separated into lists
+# and placed in the list variable called
+# "prep" for further
+# preparation on decoding.
+
+#General variables
+
+import time
+i = 0
+
+# Variables used for encoding
+jaysn = 0
+p = 0
+prep = []
+
+while i == 0:
+
+    reqst = input("Would you like to encode or decode files? (encode/decode):")
+
+    if reqst.lower() == 'encode':
+    
+        g= open("Testing.txt", 'r')
+
+        print("Encoding...")
+
+        #time.sleep(2)
+        
+        lst = g.readlines()
+
+        lst = [i.split('\n', 1)[0] for i in lst]
+
+        print(lst)
+        
+        encd_lst_lngth = len(lst)
+
+        print("Found " + str(encd_lst_lngth) + " entries")
+
+        while jaysn < len(lst):
+            print(lst[p])
+            x = lst[p].split()
+            print(x)
+            prep.append(x)
+            p = p + 1
+            jaysn = jaysn + 1
+        
+        lst.clear()
+        print(prep)
+        print(lst)
+
+        
+        print("Thank you for using the program!")
+        i = 1
+
+    elif reqst.lower() == 'decode':
+
+        g= open("Testing.txt","r")
+
+        print("Decoding...")
+
+        time.sleep(5)
+
+        print(g.readline())
+
+        print("Thank you for using this program!")
+        i = 1
+
+    else:
+        print("Invalid entry, try again")
+
+# As of the progress on this part of the code:
+
+  while jaysn < len(lst):
+            print(lst[p])
+            x = lst[p].split()
+            print(x)
+            prep.append(x)
+            p = p + 1
+            jaysn = jaysn + 1
+        
+        lst.clear()
+        print(prep)
+        print(lst)
+
+# The following output can be seen:
+
+  [['Johny', '30', 'null'], ['Brad', '18', 'Chevrolet']]
+  []
+
+# Next step is to assign a key-value pair to each of the objects above.
