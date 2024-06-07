@@ -17,7 +17,7 @@ i = 0
 # Variables used for encoding
 jaysn = 0
 p = 0
-
+prep = []
 
 while i == 0:
 
@@ -45,13 +45,15 @@ while i == 0:
             print(lst[p])
             x = lst[p].split()
             print(x)
+            prep.append(x)
             p = p + 1
             jaysn = jaysn + 1
-            
+        
+        lst.clear()
+        print(prep)
+        print(lst)
 
         
-        
-
         print("Thank you for using the program!")
         i = 1
 
@@ -80,7 +82,10 @@ while i == 0:
 # Ideas: The entries when split,
 # as lists, will be used 
 # for further work on JSON
-# format. (e.g. ['Brad', '18', 'Chevrolet'] )
+# format. (e.g. ['Brad', '18', 'Chevrolet'] ).
+
+# Ideas : the entries will require a key-value pair 
+# as of in the dictionary next.
 
 # Start of the prog.
 # encode or decode?
