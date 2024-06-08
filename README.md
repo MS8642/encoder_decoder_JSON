@@ -18,6 +18,10 @@ i = 0
 jaysn = 0
 p = 0
 prep = []
+fnl_strg = 0
+w = 0
+jasone = 0
+strg = []
 
 while i == 0:
 
@@ -52,6 +56,27 @@ while i == 0:
         lst.clear()
         print(prep)
         print(lst)
+
+        print(len(prep))
+
+        while fnl_strg < len(prep):
+            conve = prep[w]
+            
+            entry = {
+                "name":conve[0],
+                "age":conve[1],
+                "car":conve[2]
+                }
+            print(entry)
+            strg.append(entry)
+            w = w + 1
+            fnl_strg = fnl_strg + 1
+
+        print(strg)
+            
+
+
+
 
         
         print("Thank you for using the program!")
