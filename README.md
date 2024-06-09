@@ -67,12 +67,17 @@ while i == 0:
                 "age":conve[1],
                 "car":conve[2]
                 }
-            print(entry)
-            strg.append(entry)
+
+            entry_str = str(entry)
+            strg.append(entry_str)
             w = w + 1
             fnl_strg = fnl_strg + 1
 
         print(strg)
+        file = open("Fresult.txt",'w')
+        for items in strg:
+            file.write(items+"\n")
+        file.close()
             
 
 
@@ -111,6 +116,10 @@ while i == 0:
 
 # Ideas : the entries will require a key-value pair 
 # as of in the dictionary next.
+
+# ENCODER: DONE.
+
+# Next: DECODER.
 
 # Start of the prog.
 # encode or decode?
