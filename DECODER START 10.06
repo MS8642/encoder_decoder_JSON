@@ -1,0 +1,108 @@
+# Please note , this section covers the decoding section modifications only.
+
+# At the start, decoding section has similar modifications to the
+# encoding section.
+
+#General variables
+
+import time
+i = 0
+
+# Variables used for encoding
+jaysn = 0
+p = 0
+prep = []
+fnl_strg = 0
+w = 0
+jasone = 0
+strg = []
+
+# Variables used for decoding
+
+while i == 0:
+
+    reqst = input("Would you like to encode or decode files? (encode/decode):")
+
+    if reqst.lower() == 'encode':
+    
+        g= open("Testing.txt", 'r')
+
+        print("Encoding...")
+
+        #time.sleep(2)
+        
+        lst = g.readlines()
+
+        lst = [i.split('\n', 1)[0] for i in lst]
+
+        print(lst)
+        
+        encd_lst_lngth = len(lst)
+
+        print("Found " + str(encd_lst_lngth) + " entries")
+
+        while jaysn < len(lst):
+            print(lst[p])
+            x = lst[p].split()
+            print(x)
+            prep.append(x)
+            p = p + 1
+            jaysn = jaysn + 1
+        
+        lst.clear()
+        print(prep)
+        print(lst)
+
+        print(len(prep))
+
+        while fnl_strg < len(prep):
+            conve = prep[w]
+            
+            entry = {
+                "name":conve[0],
+                "age":conve[1],
+                "car":conve[2]
+                }
+
+            entry_str = str(entry)
+            strg.append(entry_str)
+            w = w + 1
+            fnl_strg = fnl_strg + 1
+
+        print(strg)
+        file = open("Fresult.txt",'w')
+        for items in strg:
+            file.write(items+"\n")
+        file.close()
+            
+
+
+
+
+        
+        print("Thank you for using the program!")
+        i = 1
+
+    elif reqst.lower() == 'decode':
+
+        g= open("Fresult.txt","r")
+
+        print("Decoding...")
+
+        #time.sleep(5)
+
+        lst_dec = g.readlines()
+
+        lst_dec = [i.split('\n', 1)[0] for i in lst_dec]
+
+        print(lst_dec)
+
+
+
+
+
+        print("Thank you for using this program!")
+        i = 1
+
+    else:
+        print("Invalid entry, try again")
