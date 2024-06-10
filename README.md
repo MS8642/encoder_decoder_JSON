@@ -23,6 +23,8 @@ w = 0
 jasone = 0
 strg = []
 
+# Variables used for decoding
+
 while i == 0:
 
     reqst = input("Would you like to encode or decode files? (encode/decode):")
@@ -89,13 +91,21 @@ while i == 0:
 
     elif reqst.lower() == 'decode':
 
-        g= open("Testing.txt","r")
+        g= open("Fresult.txt","r")
 
         print("Decoding...")
 
-        time.sleep(5)
+        #time.sleep(5)
 
-        print(g.readline())
+        lst_dec = g.readlines()
+
+        lst_dec = [i.split('\n', 1)[0] for i in lst_dec]
+
+        print(lst_dec)
+
+
+
+
 
         print("Thank you for using this program!")
         i = 1
