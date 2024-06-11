@@ -24,6 +24,9 @@ jasone = 0
 strg = []
 
 # Variables used for decoding
+dec = 0
+d = 0
+
 
 while i == 0:
 
@@ -102,6 +105,22 @@ while i == 0:
         lst_dec = [i.split('\n', 1)[0] for i in lst_dec]
 
         print(lst_dec)
+
+        print(len(lst_dec))
+
+
+        while dec < len(lst_dec):
+            q = lst_dec[d]
+            print(q)
+            dec = dec + 1
+            d = d + 1
+
+        #file_final = open("Fresult_decode.txt", "w")
+
+        #file_final.close()
+
+
+
 
 
 
