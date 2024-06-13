@@ -1,0 +1,9 @@
+# No code updates has been done today,
+# only some file convertations to JSON 
+# format.
+
+# What is important is to understand which files 
+# should be converted to JSON and which are not
+# since the program should encode 
+# complex subjects to JSON 
+# and back.
