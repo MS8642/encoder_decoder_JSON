@@ -1,0 +1,7 @@
+# This is just a note of thoughts
+
+#It might be reasonable to use ALL
+# files in .json format
+# since there is a problem 
+# from converting text from text file
+# to .json.
