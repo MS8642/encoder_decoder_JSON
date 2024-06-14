@@ -5,3 +5,7 @@
 # since there is a problem 
 # from converting text from text file
 # to .json.
+
+# Update : JSON Object explanation https://www.w3schools.com/js/js_json_objects.asp
+
+# Required to convert the JSON Object to a JSON string.
