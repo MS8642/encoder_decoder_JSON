@@ -1,0 +1,10 @@
+# This is the note for thinking and analysing
+
+# What is important when working with JSON files in Python is
+# to import json library:
+
+  import json
+
+# In the description of this library it actually 
+# describes how to encode or decode.
+# Shall continue analysing the work.
