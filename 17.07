@@ -1,0 +1,12 @@
+# A note of thought
+
+# It is better to concentrate for now on
+# a simpler model of the code
+# and later to transform
+# it to a more complicated version.
+
+# That is, not to transform 
+# the text files to JSON format just yet,
+# and to continue working in text format.
+# When the code blueprint for text files will be done,
+# it will be simpler to do it in JSON format.
