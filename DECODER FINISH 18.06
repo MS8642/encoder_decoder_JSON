@@ -1,0 +1,173 @@
+# This section covers both parts of the function.
+
+# It was discovered that even though 
+# the work was commenced in .txt
+# it is still required to use the 
+# json module.
+
+  import json
+
+# It is required, so the function
+# could convert the dictionary (complex object)
+# into a json string which can 
+# later be used as a data storage
+# and later to be converted back into
+# the complex object.
+
+# Modification for the encoder:
+
+    entry_str = json.dumps(entry)
+            strg.append(entry_str)
+            w = w + 1
+            fnl_strg = fnl_strg + 1
+
+# So the function that makes it work is:
+
+  variable = json.dumps()
+
+# In the decoder section, this part turns the complex object back
+# into the string:
+
+          while dec < len(lst_dec):
+            q = lst_dec[d]
+            print(q)
+            time.sleep(2)
+            res = json.loads(q)
+            print(res)
+            dec = dec + 1
+            d = d + 1
+
+# The function that is cruicial here is:
+
+  variable = json.loads()
+
+# This is the code:
+
+# General variables
+
+import time
+import json
+i = 0
+
+# Variables used for encoding
+jaysn = 0
+p = 0
+prep = []
+fnl_strg = 0
+w = 0
+jasone = 0
+strg = []
+
+# Variables used for decoding
+dec = 0
+d = 0
+dec_prep =[]
+
+
+while i == 0:
+
+    reqst = input("Would you like to encode or decode files? (encode/decode):")
+
+    if reqst.lower() == 'encode':
+    
+        g= open("Testing.txt", 'r')
+
+        print("Encoding...")
+
+        #time.sleep(2)
+        
+        lst = g.readlines()
+
+        lst = [i.split('\n', 1)[0] for i in lst]
+
+        print(lst)
+        
+        encd_lst_lngth = len(lst)
+
+        print("Found " + str(encd_lst_lngth) + " entries")
+
+        while jaysn < len(lst):
+            print(lst[p])
+            x = lst[p].split()
+            print(x)
+            prep.append(x)
+            p = p + 1
+            jaysn = jaysn + 1
+        
+        lst.clear()
+        print(prep)
+        print(lst)
+
+        print(len(prep))
+
+        while fnl_strg < len(prep):
+            conve = prep[w]
+            
+            entry = {
+                "name":conve[0],
+                "age":conve[1],
+                "car":conve[2]
+                }
+
+            entry_str = json.dumps(entry)
+            strg.append(entry_str)
+            w = w + 1
+            fnl_strg = fnl_strg + 1
+
+        print(strg)
+        file = open("Fresult.txt",'w')
+        for items in strg:
+            file.write(items+'\n')
+
+        file.close()
+            
+
+
+
+
+        
+        print("Thank you for using the program!")
+        i = 1
+
+    elif reqst.lower() == 'decode':
+
+        g= open("Fresult.txt","r")
+
+        print("Decoding...")
+
+        #time.sleep(5)
+
+        lst_dec = g.readlines()
+
+        lst_dec = [i.split('\n', 1)[0] for i in lst_dec]
+
+        print(lst_dec)
+
+        print(len(lst_dec))
+
+
+        while dec < len(lst_dec):
+            q = lst_dec[d]
+            print(q)
+            time.sleep(2)
+            res = json.loads(q)
+            print(res)
+            dec = dec + 1
+            d = d + 1
+
+        #file_final = open("Fresult_decode.txt", "w")
+
+        #file_final.close()
+
+
+
+
+
+
+
+
+        print("Thank you for using this program!")
+        i = 1
+
+    else:
+        print("Invalid entry, try again")
