@@ -1,0 +1,36 @@
+# The decoder is done, however the decoded files 
+# wont add to the new file.
+
+# This is the code for DECODE section:
+
+   g= open("Fresult.txt","r")
+
+        print("Decoding...")
+
+        #time.sleep(5)
+
+        lst_dec = g.readlines()
+
+        lst_dec = [i.split('\n', 1)[0] for i in lst_dec]
+
+        print(lst_dec)
+
+        print(len(lst_dec))
+
+        f_file = open("Fresult_decode.txt", "w")
+
+        while dec < len(lst_dec):
+            q = lst_dec[d]
+            #print(q)
+            time.sleep(2)
+            res = json.loads(q)
+            print(res)
+            f_file.write(res + '\n')
+            dec = dec + 1
+            d = d + 1
+
+        f_file.close()
+
+
+        print("Thank you for using this program!")
+        i = 1
